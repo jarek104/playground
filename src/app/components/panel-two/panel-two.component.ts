@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import { LayoutItem } from '../../models/layout-item';
 import { ComponentInjectorDirective } from '../../directives/component-injector.directive';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-panel-two',
@@ -11,29 +12,32 @@ export class PanelTwoComponent implements OnInit {
 
   @Input() layoutComponents: LayoutItem[] = [];
   @ViewChild(ComponentInjectorDirective) injectorHost: ComponentInjectorDirective;
-  currentAdIndex = -1;
-  interval: any;
+  currentIndex = 0;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver
   ) { }
 
   ngOnInit() {
-    console.log(this.layoutComponents);
     this.loadComponent();
   }
 
-  ngOnDestroy() {
-    clearInterval(this.interval);
-  }
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.layoutComponents[0].component);
-    console.log(componentFactory);
+    let currentItem = this.layoutComponents[this.currentIndex];
+    let resolvedComponent = this.componentFactoryResolver.resolveComponentFactory(currentItem.component);
 
     let viewContainerRef = this.injectorHost.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
+    let componentRef = viewContainerRef.createComponent(resolvedComponent);
+  }
+
+  swapComponent(comp: any) {
+    this.currentIndex === 0? this.currentIndex++ : this.currentIndex--;
+
+
+    this.loadComponent();
+
   }
 
 }

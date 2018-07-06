@@ -11,8 +11,8 @@ export class ComponentFactoryService {
   constructor() { }
   getLayoutItems() {
     return [
-      new LayoutItem(ViewerComponent, {test: 'hi'}),
-      new LayoutItem(HitlistComponent, {test: 'hi'}),
+      new LayoutItem(ViewerComponent, {name: 'Viewer'}),
+      new LayoutItem(HitlistComponent, {name: 'Hitlist'}),
     ];
   }
 }

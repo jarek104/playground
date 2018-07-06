@@ -1,5 +1,11 @@
 <div style="height: 200px; background: lightsalmon;">
     Actual panel TWO content
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <ng-container *ngFor="let comp of layoutComponents">
+          <button mat-menu-item (click)="swapComponent(comp)">{{ comp.data.name }}</button>
+      </ng-container>
+    </mat-menu>
     <ng-template appComponentInjector>
 
     </ng-template>

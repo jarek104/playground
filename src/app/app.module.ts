@@ -32,7 +32,7 @@ import { ComponentFactoryService } from './services/component-factory.service';
     MaterialModule,
     SharedModule
   ],
-  entryComponents: [ ViewerComponent ],
+  entryComponents: [ ViewerComponent, HitlistComponent ],
   providers: [ComponentFactoryService],
   bootstrap: [AppComponent]
 })
