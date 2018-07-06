@@ -6,11 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './shared/material.module';
+import { LayoutContainerComponent } from './components/layout-container/layout-container.component';
+import { PanelOneComponent } from './components/panel-one/panel-one.component';
+import { PanelTwoComponent } from './components/panel-two/panel-two.component';
+import { ComponentInjectorDirective } from './directives/component-injector.directive';
+import { ViewerComponent } from './components/viewer/viewer.component';
+import { HitlistComponent } from './components/hitlist/hitlist.component';
+import { ComponentFactoryService } from './services/component-factory.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutContainerComponent,
+    PanelOneComponent,
+    PanelTwoComponent,
+    ComponentInjectorDirective,
+    ViewerComponent,
+    HitlistComponent
   ],
+
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -18,7 +32,8 @@ import { MaterialModule } from './shared/material.module';
     MaterialModule,
     SharedModule
   ],
-  providers: [],
+  entryComponents: [ ViewerComponent ],
+  providers: [ComponentFactoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

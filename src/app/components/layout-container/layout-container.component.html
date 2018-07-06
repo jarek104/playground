@@ -1,0 +1,12 @@
+<div class="layout-container" fxFlexFill>
+  <app-panel-one>
+    <ng-template #projectedContent>
+      <div style="height: 70px; background: lightskyblue; margin: 30px;">
+          Projected content for panel one
+      </div>
+    </ng-template>
+  </app-panel-one>
+  <app-panel-two [layoutComponents]="layoutComponents"></app-panel-two>
+
+
+</div>

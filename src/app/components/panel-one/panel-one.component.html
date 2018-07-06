@@ -1,0 +1,11 @@
+<div class="panel-wrapper">
+  <div>Actual panel ONE content</div>
+  <button mat-raised-button color="primary" (click)="toggleContent()">Toggle ContentChild and ViewChild</button>
+  <ng-container *ngTemplateOutlet="currentTemplate" fxFlexFill></ng-container>
+</div>
+
+<ng-template #viewContent>
+  <div style="height: 70px; background: lightgreen; margin: 30px;">
+      View content from panel one
+  </div>
+</ng-template>
