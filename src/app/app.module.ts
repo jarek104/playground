@@ -13,6 +13,7 @@ import { ComponentInjectorDirective } from './directives/component-injector.dire
 import { ViewerComponent } from './components/viewer/viewer.component';
 import { HitlistComponent } from './components/hitlist/hitlist.component';
 import { ComponentFactoryService } from './services/component-factory.service';
+import { WorkflowComponent } from './components/workflow/workflow.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ComponentFactoryService } from './services/component-factory.service';
     PanelTwoComponent,
     ComponentInjectorDirective,
     ViewerComponent,
-    HitlistComponent
+    HitlistComponent,
+    WorkflowComponent
   ],
 
   imports: [
@@ -32,7 +34,7 @@ import { ComponentFactoryService } from './services/component-factory.service';
     MaterialModule,
     SharedModule
   ],
-  entryComponents: [ ViewerComponent, HitlistComponent ],
+  entryComponents: [ ViewerComponent, HitlistComponent, WorkflowComponent ],
   providers: [ComponentFactoryService],
   bootstrap: [AppComponent]
 })

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { LayoutItem } from '../models/layout-item';
 import { ViewerComponent } from '../components/viewer/viewer.component';
 import { HitlistComponent } from '../components/hitlist/hitlist.component';
+import { WorkflowComponent } from '../components/workflow/workflow.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class ComponentFactoryService {
     return [
       new LayoutItem(ViewerComponent, {name: 'Viewer'}),
       new LayoutItem(HitlistComponent, {name: 'Hitlist'}),
+      new LayoutItem(WorkflowComponent, {name: 'Workflow'}),
     ];
   }
 }

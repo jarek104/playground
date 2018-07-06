@@ -22,8 +22,8 @@ export class PanelTwoComponent implements OnInit {
     this.loadComponent();
   }
 
-  loadComponent() {
-    let currentItem = this.layoutComponents[this.currentIndex];
+  loadComponent(comp?: LayoutItem) {
+    let currentItem = comp? comp : this.layoutComponents[this.currentIndex];
     let resolvedComponent = this.componentFactoryResolver.resolveComponentFactory(currentItem.component);
 
     let viewContainerRef = this.injectorHost.viewContainerRef;
@@ -32,12 +32,9 @@ export class PanelTwoComponent implements OnInit {
     let componentRef = viewContainerRef.createComponent(resolvedComponent);
   }
 
-  swapComponent(comp: any) {
-    this.currentIndex === 0? this.currentIndex++ : this.currentIndex--;
-
-
-    this.loadComponent();
-
+  swapComponent(comp: LayoutItem) {
+    console.log(comp.data.name);
+    this.loadComponent(comp);
   }
 
 }
