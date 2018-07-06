@@ -1,13 +1,8 @@
-<div style="height: 200px; background: lightsalmon;">
-    Actual panel TWO content
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-      <ng-container *ngFor="let comp of layoutComponents">
-          <button mat-menu-item (click)="swapComponent(comp)">{{ comp.data.name }}</button>
-      </ng-container>
-    </mat-menu>
+<div style="height: 200px;">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="primary">Layout Panel #2
+        <app-component-menu (selectedComponent)="loadComponent($event)"></app-component-menu>
+    </mat-toolbar>
+
     <ng-template appComponentInjector>
-
     </ng-template>
-</div>
-
+  </div>

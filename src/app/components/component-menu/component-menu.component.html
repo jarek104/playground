@@ -1,0 +1,6 @@
+<button mat-button [matMenuTriggerFor]="compMenu">Component Menu</button>
+<mat-menu #compMenu="matMenu">
+  <ng-container *ngFor="let comp of layoutComponents">
+      <button mat-menu-item (click)="onSwapComponent(comp)">{{ comp.data.name }}</button>
+  </ng-container>
+</mat-menu>

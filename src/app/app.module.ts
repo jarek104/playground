@@ -14,6 +14,8 @@ import { ViewerComponent } from './components/viewer/viewer.component';
 import { HitlistComponent } from './components/hitlist/hitlist.component';
 import { ComponentFactoryService } from './services/component-factory.service';
 import { WorkflowComponent } from './components/workflow/workflow.component';
+import { PanelThreeComponent } from './components/panel-three/panel-three.component';
+import { ComponentMenuComponent } from './components/component-menu/component-menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { WorkflowComponent } from './components/workflow/workflow.component';
     ComponentInjectorDirective,
     ViewerComponent,
     HitlistComponent,
-    WorkflowComponent
+    WorkflowComponent,
+    PanelThreeComponent,
+    ComponentMenuComponent
   ],
 
   imports: [
