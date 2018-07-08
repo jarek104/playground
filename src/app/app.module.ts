@@ -16,6 +16,8 @@ import { ComponentFactoryService } from './services/component-factory.service';
 import { WorkflowComponent } from './components/workflow/workflow.component';
 import { PanelThreeComponent } from './components/panel-three/panel-three.component';
 import { ComponentMenuComponent } from './components/component-menu/component-menu.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { LayoutConfigDialogComponent } from './components/layout-config-dialog/layout-config-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ComponentMenuComponent } from './components/component-menu/component-me
     HitlistComponent,
     WorkflowComponent,
     PanelThreeComponent,
-    ComponentMenuComponent
+    ComponentMenuComponent,
+    LayoutComponent,
+    LayoutConfigDialogComponent
   ],
 
   imports: [
@@ -38,7 +42,12 @@ import { ComponentMenuComponent } from './components/component-menu/component-me
     MaterialModule,
     SharedModule
   ],
-  entryComponents: [ ViewerComponent, HitlistComponent, WorkflowComponent ],
+  entryComponents: [
+    ViewerComponent,
+    HitlistComponent,
+    WorkflowComponent,
+    LayoutConfigDialogComponent
+   ],
   providers: [ComponentFactoryService],
   bootstrap: [AppComponent]
 })
