@@ -18,6 +18,7 @@ import { PanelThreeComponent } from './components/panel-three/panel-three.compon
 import { ComponentMenuComponent } from './components/component-menu/component-menu.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { LayoutConfigDialogComponent } from './components/layout-config-dialog/layout-config-dialog.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LayoutConfigDialogComponent } from './components/layout-config-dialog/l
     PanelThreeComponent,
     ComponentMenuComponent,
     LayoutComponent,
-    LayoutConfigDialogComponent
+    LayoutConfigDialogComponent,
+    PanelComponent
   ],
 
   imports: [

@@ -1,6 +1,11 @@
-<button mat-button [matMenuTriggerFor]="compMenu">Component Menu</button>
+<!-- <button mat-mini-fab color="primary" [matMenuTriggerFor]="compMenu">
+    <mat-icon aria-label="Example icon-button with a heart icon">settings</mat-icon>
+</button> -->
+<button mat-icon-button [matMenuTriggerFor]="compMenu" color="primary">
+    <mat-icon aria-label="Example icon-button with a heart icon">settings</mat-icon>
+  </button>
 <mat-menu #compMenu="matMenu">
-  <ng-container *ngFor="let comp of layoutComponents">
-      <button mat-menu-item (click)="onSwapComponent(comp)">{{ comp.data.name }}</button>
-  </ng-container>
+    <ng-container *ngFor="let comp of layoutComponents">
+        <button mat-menu-item (click)="onSwapComponent(comp)">{{ comp.data.name }}</button>
+    </ng-container>
 </mat-menu>
