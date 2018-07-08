@@ -33,8 +33,8 @@ import { PanelComponent } from './components/panel/panel.component';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     MaterialModule,
-    SharedModule
   ],
   entryComponents: [
     ViewerComponent,

@@ -13,6 +13,10 @@ export class LayoutConfigDialogComponent implements OnInit {
   availableLayouts: LayoutDefinition[];
   showAdvanced = false;
 
+  majorDividerValue = 50;
+  minorDividerValue = 40;
+  sidePaddingValue = 10;
+
   constructor(private layoutProvider: LayoutProviderService) { }
 
   ngOnInit() {

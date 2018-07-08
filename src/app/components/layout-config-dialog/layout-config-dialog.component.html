@@ -10,7 +10,14 @@
             {{ !showAdvanced ? 'expand_more' : 'expand_less' }}
         </mat-icon>Advanced Layout Settings
     </button>
-    <div *ngIf="showAdvanced">
-        Test
+    <div *ngIf="showAdvanced" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px"> Major Divider Position
+        <mat-slider max="80" min="20" step="1" [(ngModel)]="majorDividerValue">
+        </mat-slider>
+        Minor Divider Position
+        <mat-slider max="80" min="20" step="1" thumbLabel="true" [(ngModel)]="minorDividerValue">
+        </mat-slider>
+        Side Padding (%)
+        <mat-slider max="30" min="0" step="1" thumbLabel="true" [(ngModel)]="sidePaddingValue">
+        </mat-slider>
     </div>
 </div>
