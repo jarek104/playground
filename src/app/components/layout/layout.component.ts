@@ -1,6 +1,8 @@
+import { LayoutProviderService } from './../../services/layout-provider.service';
 import { Component, OnInit } from '@angular/core';
 import { LayoutConfigDialogComponent } from '../layout-config-dialog/layout-config-dialog.component';
 import { MatDialog } from '@angular/material';
+import { LayoutDefinition } from '../../models/layout-definition';
 
 @Component({
   selector: 'app-layout',
@@ -9,39 +11,24 @@ import { MatDialog } from '@angular/material';
 })
 export class LayoutComponent implements OnInit {
 
-  layoutDefinition: LayoutDefinition = {
-    majorDividerDirection: 'row',
-    primaryMajorPortion: 35,
-    primaryMinorPortion: 50,
-    minorDividerDirection: 'column',
-    thirdPanel: true,
-    narrowView: false,
-    sidesPadding: 5,
-  };
+  layoutDefinition: LayoutDefinition;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog,
+    private layoutProvider: LayoutProviderService
+  ) { }
 
   ngOnInit() {
+    this.layoutProvider.currentLayout.subscribe(layout => {
+      this.layoutDefinition = layout;
+    });
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(LayoutConfigDialogComponent, {
-      width: '250px',
-      height: '250px',
-    });
+    const dialogRef = this.dialog.open(LayoutConfigDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }
 
-}
-
-export interface LayoutDefinition {
-  majorDividerDirection: 'column' | 'row';
-  primaryMajorPortion: number;
-  primaryMinorPortion: number;
-  minorDividerDirection: 'column' | 'row';
-  thirdPanel: boolean;
-  narrowView: boolean;
-  sidesPadding: number;
 }

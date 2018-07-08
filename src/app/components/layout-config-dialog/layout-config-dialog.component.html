@@ -1,3 +1,16 @@
-<p>
-  layout-config-dialog works!
-</p>
+<div class="container" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="30px">
+    <div>Select Layout</div>
+    <div>
+        <ng-container *ngFor="let layout of availableLayouts">
+            <img [src]="layout.layoutIcon" alt="" width="100px" height="100px" class="layout-button" (click)="changeLayout(layout)" [ngClass]="{'selected-layout': layoutDefinition === layout }">
+        </ng-container>
+    </div>
+    <button mat-button (click)="toggleAdvanced()">
+        <mat-icon>
+            {{ !showAdvanced ? 'expand_more' : 'expand_less' }}
+        </mat-icon>Advanced Layout Settings
+    </button>
+    <div *ngIf="showAdvanced">
+        Test
+    </div>
+</div>
