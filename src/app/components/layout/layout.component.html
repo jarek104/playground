@@ -1,14 +1,14 @@
 <div class="layout-wrapper" fxFlexFill [fxLayout]="layoutDefinition.majorDividerDirection" fxLayoutAlign="space-around stretch" fxLayoutGap="10px" [ngStyle]="{'padding': '5px ' + layoutDefinition.sidesPadding + '%'}">
     <div class="primary" [fxLayout]="layoutDefinition.minorDividerDirection" fxLayoutAlign="space-around stretch" fxLayoutGap="10px" [fxFlex]="layoutDefinition.primaryMajorPortion">
         <div class="panel-one" [fxFlex]="layoutDefinition.primaryMinorPortion">
-            <app-panel></app-panel>
+            <app-panel [layoutComponents]="layoutComponents"></app-panel>
         </div>
         <div class="panel-two" fxFlex *ngIf="layoutDefinition.thirdPanel">
-            <app-panel></app-panel>
+            <app-panel [layoutComponents]="layoutComponents"></app-panel>
         </div>
     </div>
     <div class="secondary" fxFlex>
-        <app-panel></app-panel>
+        <app-panel [layoutComponents]="layoutComponents"></app-panel>
     </div>
 </div>
 

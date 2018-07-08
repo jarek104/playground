@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { LayoutConfigDialogComponent } from '../layout-config-dialog/layout-config-dialog.component';
 import { MatDialog } from '@angular/material';
 import { LayoutDefinition } from '../../models/layout-definition';
+import { LayoutItem } from '../../models/layout-item';
+import { ComponentFactoryService } from '../../services/component-factory.service';
 
 @Component({
   selector: 'app-layout',
@@ -12,13 +14,16 @@ import { LayoutDefinition } from '../../models/layout-definition';
 export class LayoutComponent implements OnInit {
 
   layoutDefinition: LayoutDefinition;
+  layoutComponents: LayoutItem[];
 
   constructor(
     public dialog: MatDialog,
-    private layoutProvider: LayoutProviderService
+    private layoutProvider: LayoutProviderService,
+    private cfService: ComponentFactoryService
   ) { }
 
   ngOnInit() {
+    this.layoutComponents = this.cfService.getLayoutItems();
     this.layoutProvider.currentLayout.subscribe(layout => {
       this.layoutDefinition = layout;
     });
