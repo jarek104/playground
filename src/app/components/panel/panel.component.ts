@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import { LayoutItem } from '../../models/layout-item';
 import { ComponentInjectorDirective } from '../../directives/component-injector.directive';
+import { LayoutProviderService } from '../../services/layout-provider.service';
 
 @Component({
   selector: 'app-panel',
@@ -11,10 +12,10 @@ export class PanelComponent implements OnInit {
 
   @Input() layoutComponents: LayoutItem[] = [];
   @ViewChild(ComponentInjectorDirective) injectorHost: ComponentInjectorDirective;
-  currentIndex = 0;
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private layoutProvider: LayoutProviderService
   ) { }
 
   ngOnInit() {
@@ -22,7 +23,7 @@ export class PanelComponent implements OnInit {
   }
 
   loadComponent(comp?: LayoutItem) {
-    const currentItem = comp ? comp : this.layoutComponents[this.currentIndex];
+    const currentItem = comp ? comp : this.layoutComponents[this.layoutProvider.currentIndex];
     const resolvedComponent = this.componentFactoryResolver.resolveComponentFactory(currentItem.component);
 
     const viewContainerRef = this.injectorHost.viewContainerRef;
@@ -30,10 +31,4 @@ export class PanelComponent implements OnInit {
 
     const componentRef = viewContainerRef.createComponent(resolvedComponent);
   }
-
-  swapComponent(comp: LayoutItem) {
-    console.log(comp.data.name);
-    this.loadComponent(comp);
-  }
-
 }

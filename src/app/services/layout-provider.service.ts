@@ -9,6 +9,12 @@ import { LayoutDefinition } from '../models/layout-definition';
 export class LayoutProviderService {
 
   layouts = LAYOUTS;
+  private index = -1;
+
+  get currentIndex() {
+    this.index++;
+    return this.index;
+  }
 
   currentLayout: BehaviorSubject<LayoutDefinition> = new BehaviorSubject<LayoutDefinition>(this.layouts[0]);
 

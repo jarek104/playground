@@ -11,13 +11,13 @@
         </mat-icon>Advanced Layout Settings
     </button>
     <div *ngIf="showAdvanced" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px"> Major Divider Position
-        <mat-slider max="75" min="25" step="1" [(ngModel)]="majorDividerValue" (change)="onSliderChange()">
+        <mat-slider max="75" min="25" step="1" [(ngModel)]="tempLayout.primaryMajorPortion" (change)="onSliderChange()">
         </mat-slider>
         Minor Divider Position
-        <mat-slider max="75" min="25" step="1" thumbLabel="true" [(ngModel)]="minorDividerValue" (change)="onSliderChange()">
+        <mat-slider max="75" min="25" step="1" thumbLabel="true" [(ngModel)]="tempLayout.primaryMinorPortion" (change)="onSliderChange()" [disabled]="tempLayout.primaryMinorPortion === 0">
         </mat-slider>
         Side Padding (%)
-        <mat-slider max="15" min="0" step="1" thumbLabel="true" [(ngModel)]="sidePaddingValue" (change)="onSliderChange()">
+        <mat-slider max="15" min="0" step="1" thumbLabel="true" [(ngModel)]="tempLayout.sidesPadding" (change)="onSliderChange()">
         </mat-slider>
     </div>
 </div>

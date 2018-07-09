@@ -38,9 +38,9 @@ export class LayoutConfigDialogComponent implements OnInit {
   }
 
   onSliderChange() {
-    this.tempLayout.primaryMajorPortion = this.majorDividerValue;
-    this.tempLayout.primaryMinorPortion = this.minorDividerValue;
-    this.tempLayout.sidesPadding = this.sidePaddingValue;
+    // this.tempLayout.primaryMajorPortion = this.majorDividerValue;
+    // this.tempLayout.primaryMinorPortion = this.minorDividerValue;
+    // this.tempLayout.sidesPadding = this.sidePaddingValue;
 
     this.changeLayout(this.tempLayout);
   }

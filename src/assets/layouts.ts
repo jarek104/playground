@@ -7,7 +7,6 @@ export const LAYOUTS: LayoutDefinition[] = [
       primaryMinorPortion: 50,
       minorDividerDirection: 'column',
       thirdPanel: true,
-      narrowView: false,
       sidesPadding: 5,
       layoutIcon: '../../assets/layout-icons/layout-1.svg'
     },
@@ -17,7 +16,6 @@ export const LAYOUTS: LayoutDefinition[] = [
       primaryMinorPortion: 50,
       minorDividerDirection: 'row',
       thirdPanel: true,
-      narrowView: false,
       sidesPadding: 10,
       layoutIcon: '../../assets/layout-icons/layout-2.svg'
     },
@@ -27,7 +25,6 @@ export const LAYOUTS: LayoutDefinition[] = [
       primaryMinorPortion: 50,
       minorDividerDirection: 'row',
       thirdPanel: true,
-      narrowView: false,
       sidesPadding: 0,
       layoutIcon: '../../assets/layout-icons/layout-3.svg'
     },
@@ -37,7 +34,6 @@ export const LAYOUTS: LayoutDefinition[] = [
       primaryMinorPortion: 0,
       minorDividerDirection: undefined,
       thirdPanel: false,
-      narrowView: false,
       sidesPadding: 5,
       layoutIcon: '../../assets/layout-icons/layout-4.svg'
     },
@@ -47,7 +43,6 @@ export const LAYOUTS: LayoutDefinition[] = [
       primaryMinorPortion: 0,
       minorDividerDirection: undefined,
       thirdPanel: false,
-      narrowView: false,
       sidesPadding: 10,
       layoutIcon: '../../assets/layout-icons/layout-5.svg'
     },

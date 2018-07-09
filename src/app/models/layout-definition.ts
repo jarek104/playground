@@ -4,7 +4,6 @@ export interface LayoutDefinition {
     primaryMinorPortion: number;
     minorDividerDirection: 'column' | 'row' | undefined;
     thirdPanel: boolean;
-    narrowView: boolean;
     sidesPadding: number;
     layoutIcon: string;
 }
