@@ -3,11 +3,11 @@
         <div class="panel-one" [fxFlex]="layoutDefinition.primaryMinorPortion">
             <app-panel [layoutComponents]="layoutComponents"></app-panel>
         </div>
-        <div class="panel-two" [fxFlex]="'100' - layoutDefinition.primaryMinorPortion" *ngIf="layoutDefinition.thirdPanel">
+        <div class="panel-two" [fxFlex]="100 - layoutDefinition.primaryMinorPortion" *ngIf="layoutDefinition.thirdPanel">
             <app-panel [layoutComponents]="layoutComponents"></app-panel>
         </div>
     </div>
-    <div class="secondary" [fxFlex]="'100' - layoutDefinition.primaryMajorPortion">
+    <div class="secondary" [fxFlex]="100 - layoutDefinition.primaryMajorPortion">
         <app-panel [layoutComponents]="layoutComponents"></app-panel>
     </div>
 </div>
