@@ -15,6 +15,9 @@ import { ComponentMenuComponent } from './components/component-menu/component-me
 import { LayoutComponent } from './components/layout/layout.component';
 import { LayoutConfigDialogComponent } from './components/layout-config-dialog/layout-config-dialog.component';
 import { PanelComponent } from './components/panel/panel.component';
+import { ExpansionContainerComponent } from './components/expansion-container/expansion-container.component';
+import { XpAccordionComponent } from './components/xp-accordion/xp-accordion.component';
+import { XpAccordionPanelComponent } from './components/xp-accordion-panel/xp-accordion-panel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { PanelComponent } from './components/panel/panel.component';
     ComponentMenuComponent,
     LayoutComponent,
     LayoutConfigDialogComponent,
-    PanelComponent
+    PanelComponent,
+    ExpansionContainerComponent,
+    XpAccordionComponent,
+    XpAccordionPanelComponent
   ],
 
   imports: [

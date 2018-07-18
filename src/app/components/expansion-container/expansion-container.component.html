@@ -1,0 +1,56 @@
+<div fxFlexFill>
+  <mat-accordion class="example-headers-align" fxFlex displayMode="flat" style="background: lemonchiffon" fxLayout="column">
+
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle [fxFlex]="step === 0 ? 100 : 0">
+      <mat-expansion-panel-header class="expansion-panel-header">
+        <mat-toolbar class="expansion-panel-toolbar results-toolbar">
+          <span>Results</span>
+        </mat-toolbar>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <mat-nav-list role="list" *ngFor="let item of documents" fxFlexFill>
+            <mat-list-item>
+              <p mat-line>{{ item }}</p>
+              <button mat-icon-button (click)="setStep(1); $event.stopPropagation();">
+                <mat-icon>insert_link</mat-icon>
+              </button>
+              <button mat-icon-button (click)="setStep(2); $event.stopPropagation();">
+                <mat-icon>vpn_key</mat-icon>
+              </button>
+            </mat-list-item>
+          </mat-nav-list>
+      </ng-template>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle [fxFlex]="step === 1 ? 100 : 0">
+      <mat-expansion-panel-header class="expansion-panel-header">
+        <mat-toolbar class="expansion-panel-toolbar related-documents-toolbar">
+          <span>Related documents</span>
+        </mat-toolbar>
+      </mat-expansion-panel-header>
+      <mat-nav-list role="list" style="height: 100%" *ngFor="let item of documents">
+        <mat-list-item>
+          <p mat-line>{{ item }}</p>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle [fxFlex]="step === 2 ? 100 : 0">
+      <mat-expansion-panel-header class="expansion-panel-header">
+        <mat-toolbar class="expansion-panel-toolbar keywords-toolbar">
+          <span>Keywords</span>
+        </mat-toolbar>
+      </mat-expansion-panel-header>
+      <mat-nav-list role="list" style="height: 100%" *ngFor="let item of keywords">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput [placeholder]="item.name" [value]="item.value">
+            </mat-form-field>
+          </form>
+
+      </mat-nav-list>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>

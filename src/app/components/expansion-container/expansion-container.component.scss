@@ -1,0 +1,35 @@
+.expansion-panel-header {
+  padding: 0;
+  max-height: 48px;
+}
+
+.expansion-panel-toolbar {
+  color: #fff;
+}
+
+.related-documents-toolbar {
+  background: lightcoral;
+}
+
+.results-toolbar {
+  background: lightgreen;
+}
+
+.keywords-toolbar {
+  background: lightskyblue;
+}
+
+.mat-expansion-panel-content {
+  height: 100%;
+}
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+::ng-deep .parametersPanel .mat-expansion-panel-body {
+  padding: 0;
+}
