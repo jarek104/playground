@@ -7,20 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XpAccordionComponent implements OnInit {
 
+  step = 0;
   constructor() { }
 
   ngOnInit() {
   }
-
-  doWork(element: any) {
-    console.log(element);
-
-    element.classList.toggle("active");
-    var panel = element.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
+  setStep(step:number) {
+    this.step = step;
   }
+
 }

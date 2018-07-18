@@ -1,16 +1,7 @@
 <div fxFlexFill style="background: lightcoral">
-    <button class="accordion" #myEl (click)="doWork(myEl)">Section 1</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <button class="accordion" #myEl (click)="doWork(myEl)">Section 2</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <button class="accordion" #myEl (click)="doWork(myEl)">Section 3</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+  <div fxLayout="column" fxLayoutAlign="start center" fxFlex>
+    <app-xp-accordion-panel [fxFlex]="step === 0 ? 100 : 0" (click)="setStep(0)"></app-xp-accordion-panel>
+    <app-xp-accordion-panel [fxFlex]="step === 1 ? 100 : 0" (click)="setStep(1)"></app-xp-accordion-panel>
+    <app-xp-accordion-panel [fxFlex]="step === 2 ? 100 : 0" (click)="setStep(2)"></app-xp-accordion-panel>
+  </div>
 </div>

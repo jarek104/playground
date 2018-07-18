@@ -12,4 +12,15 @@ export class XpAccordionPanelComponent implements OnInit {
   ngOnInit() {
   }
 
+  doWork(element: any) {
+    console.log(element);
+
+    element.classList.toggle("active");
+    var panel = element.nextElementSibling;
+    if (panel.style.minHeight){
+      panel.style.minHeight = null;
+    } else {
+      panel.style.minHeight = "100%";
+    }
+  }
 }
