@@ -1,8 +1,6 @@
-<div fxLayout="column" fxLayoutAlign="start start">
-    <button class="accordion-button" #myEl (click)="doWork(myEl)">Section</button>
+<div fxLayout="column" fxLayoutAlign="start start" class="item" [ngClass]="{'expand': expanded}">
+    <p>Test</p>
 
-    <div class="panel" *ngIf="expanded">
-        <ng-content></ng-content>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
 </div>

@@ -1,14 +1,11 @@
-<!-- <div fxFlexFill>
-    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex style="background: lightgrey">
-        <app-xp-accordion-panel [fxFlex]="step === 0 ? 100 : 0" [expanded]="step === 0 ? true : false" (click)="setStep(0)">test</app-xp-accordion-panel>
-        <app-xp-accordion-panel [fxFlex]="step === 1 ? 100 : 0" [expanded]="step === 0 ? true : false" (click)="setStep(1)">asdf</app-xp-accordion-panel>
-        <app-xp-accordion-panel [fxFlex]="step === 2 ? 100 : 0" [expanded]="step === 0 ? true : false" (click)="setStep(2)">asdgg</app-xp-accordion-panel>
-    </div>
+<!-- <div fxFlexFill class="container">
+    <app-xp-accordion-panel [expanded]="step === 0" (click)="setStep(0)"></app-xp-accordion-panel>
+    <app-xp-accordion-panel [expanded]="step === 1" (click)="setStep(1)"></app-xp-accordion-panel>
 </div> -->
 
-<div fxFlexFill class="container">
-    <div class="item expand" style="background: lightblue" #comp1 (click)="doWork(comp1)">a</div>
-    <div class="item" style="background: lightgreen" #comp2 (click)="doWork(comp2)">b</div>
-    <div class="item" style="background: lightcoral" #comp3 (click)="doWork(comp3)">c</div>
-    <div class="item" style="background: lightgrey" #comp4 (click)="doWork(comp4)">d</div>
+<div class="container">
+    <div class="item" style="background: red"  (click)="setStep(0)" [ngClass]="step === 0 ? 'expand': ''">a</div>
+    <div class="item" style="background: green" (click)="setStep(1)" [ngClass]="step === 1 ? 'expand': ''">b</div>
+    <div class="item" style="background: blue" (click)="setStep(2)" [ngClass]="step === 2 ? 'expand': ''">c</div>
+    <div class="item" style="background: purple" (click)="setStep(3)" [ngClass]="step === 3 ? 'expand': ''">d</div>
 </div>
