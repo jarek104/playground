@@ -1,6 +1,6 @@
-<div fxLayout="column" fxLayoutAlign="start start" class="item" [ngClass]="{'expand': expanded}">
-    <p>Test</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+<div>
+    <ng-content select="app-xp-accordion-panel-header"></ng-content>
+    <div *ngIf="expanded">
+      <ng-content select="app-xp-accordion-panel-body"></ng-content>
+    </div>
 </div>

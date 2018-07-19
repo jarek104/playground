@@ -1,11 +1,18 @@
-<!-- <div fxFlexFill class="container">
-    <app-xp-accordion-panel [expanded]="step === 0" (click)="setStep(0)"></app-xp-accordion-panel>
-    <app-xp-accordion-panel [expanded]="step === 1" (click)="setStep(1)"></app-xp-accordion-panel>
-</div> -->
-
 <div class="container">
-    <div class="item" style="background: red"  (click)="setStep(0)" [ngClass]="step === 0 ? 'expand': ''">a</div>
-    <div class="item" style="background: green" (click)="setStep(1)" [ngClass]="step === 1 ? 'expand': ''">b</div>
-    <div class="item" style="background: blue" (click)="setStep(2)" [ngClass]="step === 2 ? 'expand': ''">c</div>
-    <div class="item" style="background: purple" (click)="setStep(3)" [ngClass]="step === 3 ? 'expand': ''">d</div>
+    <app-xp-accordion-panel (click)="setStep(0)" [expanded]="step === 0" style="background: lightblue">
+      <app-xp-accordion-panel-header>Results</app-xp-accordion-panel-header>
+      <app-xp-accordion-panel-body>LIST OF DOCS GOES HERE</app-xp-accordion-panel-body>
+    </app-xp-accordion-panel>
+    <app-xp-accordion-panel (click)="setStep(1)" [expanded]="step === 1" style="background: lightcoral">
+        <app-xp-accordion-panel-header>Related Documents</app-xp-accordion-panel-header>
+        <app-xp-accordion-panel-body>LIST OF RELATED DOCS GOES HERE</app-xp-accordion-panel-body>
+    </app-xp-accordion-panel>
+    <app-xp-accordion-panel (click)="setStep(2)" [expanded]="step === 2" style="background: lightgoldenrodyellow">
+        <app-xp-accordion-panel-header>Keywords</app-xp-accordion-panel-header>
+        <app-xp-accordion-panel-body>LIST OF KEYWORDS GOES HERE</app-xp-accordion-panel-body>
+    </app-xp-accordion-panel>
+    <!-- <app-xp-accordion-panel (click)="setStep(3)" [expanded]="step === 3" style="background: lightgreen">
+        <app-xp-accordion-panel-header>STUFF</app-xp-accordion-panel-header>
+        <app-xp-accordion-panel-body>LIST OF stuff GOES HERE</app-xp-accordion-panel-body>
+    </app-xp-accordion-panel> -->
 </div>

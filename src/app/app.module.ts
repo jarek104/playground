@@ -18,6 +18,8 @@ import { PanelComponent } from './components/panel/panel.component';
 import { ExpansionContainerComponent } from './components/expansion-container/expansion-container.component';
 import { XpAccordionComponent } from './components/xp-accordion/xp-accordion.component';
 import { XpAccordionPanelComponent } from './components/xp-accordion-panel/xp-accordion-panel.component';
+import { XpAccordionPanelHeaderComponent } from './components/xp-accordion-panel-header/xp-accordion-panel-header.component';
+import { XpAccordionPanelBodyComponent } from './components/xp-accordion-panel-body/xp-accordion-panel-body.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { XpAccordionPanelComponent } from './components/xp-accordion-panel/xp-ac
     PanelComponent,
     ExpansionContainerComponent,
     XpAccordionComponent,
-    XpAccordionPanelComponent
+    XpAccordionPanelComponent,
+    XpAccordionPanelHeaderComponent,
+    XpAccordionPanelBodyComponent
   ],
 
   imports: [

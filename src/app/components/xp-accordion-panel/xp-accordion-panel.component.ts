@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, OnChanges, SimpleChanges } from '@angular/core';
+import { query } from '../../../../node_modules/@angular/animations';
 
 @Component({
   selector: 'app-xp-accordion-panel',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
 })
 export class XpAccordionPanelComponent implements OnInit {
 
+  @HostBinding('class.expand')
   @Input() expanded = false;
+
   constructor() { }
 
   ngOnInit() {
