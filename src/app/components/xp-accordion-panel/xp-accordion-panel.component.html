@@ -1,6 +1,7 @@
-<div>
-    <ng-content select="app-xp-accordion-panel-header"></ng-content>
-    <div *ngIf="expanded">
-      <ng-content select="app-xp-accordion-panel-body"></ng-content>
-    </div>
-</div>
+<!-- <div class="panel-container" fxLayout="column" fxLayoutAlign="start stretch"> -->
+  <ng-content select="app-xp-accordion-panel-header"></ng-content>
+  <ng-content select="app-xp-accordion-panel-body" *ngIf="expanded" flex></ng-content>
+<!-- </div> -->
+
+
+

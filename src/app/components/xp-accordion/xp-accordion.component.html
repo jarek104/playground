@@ -1,18 +1,53 @@
 <div class="container">
-    <app-xp-accordion-panel (click)="setStep(0)" [expanded]="step === 0" style="background: lightblue">
-      <app-xp-accordion-panel-header>Results</app-xp-accordion-panel-header>
-      <app-xp-accordion-panel-body>LIST OF DOCS GOES HERE</app-xp-accordion-panel-body>
+    <app-xp-accordion-panel (click)="setStep(0)" [expanded]="step === 0">
+      <app-xp-accordion-panel-header>
+        <div class="header-style">Results</div>
+      </app-xp-accordion-panel-header>
+      <app-xp-accordion-panel-body>
+          <!-- <mat-nav-list role="list">
+              <mat-list-item *ngFor="let item of documents">
+                  <p mat-line>{{ item }}</p>
+                  <button mat-icon-button (click)="setStep(1); $event.stopPropagation();" fxHide.gt-xs>
+                    <mat-icon>insert_link</mat-icon>
+                  </button>
+                  <button mat-icon-button (click)="setStep(2); $event.stopPropagation();" fxHide.gt-xs>
+                      <mat-icon>vpn_key</mat-icon>
+                    </button>
+              </mat-list-item>
+          </mat-nav-list> -->
+          <div style="height: 1000px; background: lightcoral">TEST</div>
+      </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
-    <app-xp-accordion-panel (click)="setStep(1)" [expanded]="step === 1" style="background: lightcoral">
-        <app-xp-accordion-panel-header>Related Documents</app-xp-accordion-panel-header>
-        <app-xp-accordion-panel-body>LIST OF RELATED DOCS GOES HERE</app-xp-accordion-panel-body>
+    <app-xp-accordion-panel (click)="setStep(1)" [expanded]="step === 1">
+        <app-xp-accordion-panel-header>
+          <div class="header-style">Related Documents</div>
+        </app-xp-accordion-panel-header>
+        <app-xp-accordion-panel-body>
+          <!-- <mat-nav-list role="list" *ngFor="let item of documents">
+            <mat-list-item>
+                <p mat-line>{{ item }}</p>
+            </mat-list-item>
+          </mat-nav-list> -->
+          <div style="height: 1000px; background: lightcoral">TEST</div>
+        </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
-    <app-xp-accordion-panel (click)="setStep(2)" [expanded]="step === 2" style="background: lightgoldenrodyellow">
-        <app-xp-accordion-panel-header>Keywords</app-xp-accordion-panel-header>
-        <app-xp-accordion-panel-body>LIST OF KEYWORDS GOES HERE</app-xp-accordion-panel-body>
+    <app-xp-accordion-panel (click)="setStep(2)" [expanded]="step === 2">
+        <app-xp-accordion-panel-header>
+          <div class="header-style">Keywords</div>
+        </app-xp-accordion-panel-header>
+        <app-xp-accordion-panel-body>
+            <!-- <form fxLayout="column" fxLayoutAlign="start stretch">
+              <mat-form-field *ngFor="let keyword of keywords" class="example-full-width">
+                  <input matInput [placeholder]="keyword.name" [value]="keyword.value">
+              </mat-form-field>
+            </form> -->
+            <div style="height: 500px; background: lightcoral">TEST</div>
+        </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
-    <!-- <app-xp-accordion-panel (click)="setStep(3)" [expanded]="step === 3" style="background: lightgreen">
-        <app-xp-accordion-panel-header>STUFF</app-xp-accordion-panel-header>
+    <app-xp-accordion-panel (click)="setStep(3)" [expanded]="step === 3">
+        <app-xp-accordion-panel-header>
+            <div class="header-style">stuff</div>
+        </app-xp-accordion-panel-header>
         <app-xp-accordion-panel-body>LIST OF stuff GOES HERE</app-xp-accordion-panel-body>
-    </app-xp-accordion-panel> -->
+    </app-xp-accordion-panel>
 </div>

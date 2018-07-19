@@ -20,6 +20,7 @@ import { XpAccordionComponent } from './components/xp-accordion/xp-accordion.com
 import { XpAccordionPanelComponent } from './components/xp-accordion-panel/xp-accordion-panel.component';
 import { XpAccordionPanelHeaderComponent } from './components/xp-accordion-panel-header/xp-accordion-panel-header.component';
 import { XpAccordionPanelBodyComponent } from './components/xp-accordion-panel-body/xp-accordion-panel-body.component';
+import { XpAccordionServiceComponent } from './services/xp-accordion-service/xp-accordion-service.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { XpAccordionPanelBodyComponent } from './components/xp-accordion-panel-b
     XpAccordionComponent,
     XpAccordionPanelComponent,
     XpAccordionPanelHeaderComponent,
-    XpAccordionPanelBodyComponent
+    XpAccordionPanelBodyComponent,
+    XpAccordionServiceComponent
   ],
 
   imports: [
