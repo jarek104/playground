@@ -1,7 +1,14 @@
-<div fxFlexFill style="background: lightcoral">
-  <div fxLayout="column" fxLayoutAlign="start center" fxFlex>
-    <app-xp-accordion-panel [fxFlex]="step === 0 ? 100 : 0" (click)="setStep(0)"></app-xp-accordion-panel>
-    <app-xp-accordion-panel [fxFlex]="step === 1 ? 100 : 0" (click)="setStep(1)"></app-xp-accordion-panel>
-    <app-xp-accordion-panel [fxFlex]="step === 2 ? 100 : 0" (click)="setStep(2)"></app-xp-accordion-panel>
-  </div>
+<!-- <div fxFlexFill>
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex style="background: lightgrey">
+        <app-xp-accordion-panel [fxFlex]="step === 0 ? 100 : 0" [expanded]="step === 0 ? true : false" (click)="setStep(0)">test</app-xp-accordion-panel>
+        <app-xp-accordion-panel [fxFlex]="step === 1 ? 100 : 0" [expanded]="step === 0 ? true : false" (click)="setStep(1)">asdf</app-xp-accordion-panel>
+        <app-xp-accordion-panel [fxFlex]="step === 2 ? 100 : 0" [expanded]="step === 0 ? true : false" (click)="setStep(2)">asdgg</app-xp-accordion-panel>
+    </div>
+</div> -->
+
+<div fxFlexFill class="container">
+    <div class="item expand" style="background: lightblue" #comp1 (click)="doWork(comp1)">a</div>
+    <div class="item" style="background: lightgreen" #comp2 (click)="doWork(comp2)">b</div>
+    <div class="item" style="background: lightcoral" #comp3 (click)="doWork(comp3)">c</div>
+    <div class="item" style="background: lightgrey" #comp4 (click)="doWork(comp4)">d</div>
 </div>

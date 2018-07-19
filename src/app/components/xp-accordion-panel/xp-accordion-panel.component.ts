@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-xp-accordion-panel',
@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XpAccordionPanelComponent implements OnInit {
 
+  @Input() expanded = false;
   constructor() { }
 
   ngOnInit() {
   }
 
   doWork(element: any) {
-    console.log(element);
 
-    element.classList.toggle("active");
-    var panel = element.nextElementSibling;
-    if (panel.style.minHeight){
-      panel.style.minHeight = null;
-    } else {
-      panel.style.minHeight = "100%";
-    }
+    // element.classList.toggle('active');
+    // const panel = element.nextElementSibling;
+    // if (panel.style.minHeight) {
+    //   panel.style.minHeight = null;
+    // } else {
+    //   panel.style.minHeight = '100%';
+    // }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-xp-accordion',
@@ -12,8 +12,13 @@ export class XpAccordionComponent implements OnInit {
 
   ngOnInit() {
   }
-  setStep(step:number) {
+
+  setStep(step: number) {
     this.step = step;
   }
 
+  doWork(comp: HTMLElement) {
+    console.log(comp);
+    comp.classList.add('expanded');
+  }
 }

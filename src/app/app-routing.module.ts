@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'layout', component: LayoutComponent },
   { path: 'expansion', component: ExpansionContainerComponent },
   { path: 'accordion', component: XpAccordionComponent },
-  { path: '', redirectTo: '/layout', pathMatch: 'full'
+  { path: '', redirectTo: '/accordion', pathMatch: 'full'
   },
 ];
 
