@@ -17,12 +17,10 @@ import { LayoutConfigDialogComponent } from './components/layout-config-dialog/l
 import { PanelComponent } from './components/panel/panel.component';
 import { ExpansionContainerComponent } from './components/expansion-container/expansion-container.component';
 import { XpAccordionComponent } from './components/xp-accordion/xp-accordion.component';
-import { XpAccordionPanelComponent } from './components/xp-accordion-panel/xp-accordion-panel.component';
-import { XpAccordionPanelHeaderComponent } from './components/xp-accordion-panel-header/xp-accordion-panel-header.component';
-import { XpAccordionPanelBodyComponent } from './components/xp-accordion-panel-body/xp-accordion-panel-body.component';
-import { XpAccordionServiceComponent } from './services/xp-accordion-service/xp-accordion-service.component';
+
 import { FakeKeywordsListComponent } from './components/mocks/fake-keywords-list/fake-keywords-list.component';
 import { FakeDocumentListComponent } from './components/mocks/fake-document-list/fake-document-list.component';
+import { XpAccordionModule } from './components/xp-accordion-panel/xp-accordion.module';
 
 @NgModule({
   declarations: [
@@ -37,10 +35,6 @@ import { FakeDocumentListComponent } from './components/mocks/fake-document-list
     PanelComponent,
     ExpansionContainerComponent,
     XpAccordionComponent,
-    XpAccordionPanelComponent,
-    XpAccordionPanelHeaderComponent,
-    XpAccordionPanelBodyComponent,
-    XpAccordionServiceComponent,
     FakeKeywordsListComponent,
     FakeDocumentListComponent
   ],
@@ -51,6 +45,7 @@ import { FakeDocumentListComponent } from './components/mocks/fake-document-list
     AppRoutingModule,
     SharedModule,
     MaterialModule,
+    XpAccordionModule
   ],
   entryComponents: [
     ViewerComponent,
