@@ -1,14 +1,17 @@
 :host {
   flex-grow: 0;
-  flex-shrink: 1;
+  flex-shrink: 0;
   flex-basis: auto;
-  transition: all 0.2s;
+  transition: flex-grow 0.2s;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border-bottom: 1px solid #BDBDBD;
 }
 
 :host(.expand) {
   flex-grow: 1;
+  flex-shrink: 1;
+  border: none;
 }
 

@@ -20,7 +20,7 @@ export class XpAccordionPanelComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    console.log(this.panelBody);
+    // console.log(this.panelBody);
   }
 
 }

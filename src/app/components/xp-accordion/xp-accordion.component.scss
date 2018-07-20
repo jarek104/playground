@@ -7,7 +7,7 @@
 
 .item {
   flex-grow: 0;
-  flex-shrink: 1;
+  flex-shrink: 0;
   flex-basis: 0;
   transition: all 0.2s;
 }
@@ -23,8 +23,8 @@
 }
 
 .header-style {
-  padding: 8px;
+  padding: 14px 8px 8px 8px;
   font-size: 22px;
   font-weight: 400;
-  height: 50px;
+  height: 30px;
 }

@@ -21,6 +21,8 @@ import { XpAccordionPanelComponent } from './components/xp-accordion-panel/xp-ac
 import { XpAccordionPanelHeaderComponent } from './components/xp-accordion-panel-header/xp-accordion-panel-header.component';
 import { XpAccordionPanelBodyComponent } from './components/xp-accordion-panel-body/xp-accordion-panel-body.component';
 import { XpAccordionServiceComponent } from './services/xp-accordion-service/xp-accordion-service.component';
+import { FakeKeywordsListComponent } from './components/mocks/fake-keywords-list/fake-keywords-list.component';
+import { FakeDocumentListComponent } from './components/mocks/fake-document-list/fake-document-list.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { XpAccordionServiceComponent } from './services/xp-accordion-service/xp-
     XpAccordionPanelComponent,
     XpAccordionPanelHeaderComponent,
     XpAccordionPanelBodyComponent,
-    XpAccordionServiceComponent
+    XpAccordionServiceComponent,
+    FakeKeywordsListComponent,
+    FakeDocumentListComponent
   ],
 
   imports: [
