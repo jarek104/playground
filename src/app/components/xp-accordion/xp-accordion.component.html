@@ -1,7 +1,7 @@
 <div class="container">
     <app-xp-accordion-panel (click)="setStep(0)" [expanded]="step === 0">
       <app-xp-accordion-panel-header>
-        <div class="header-style">Results</div>
+        <div class="header-style">Query Results</div>
       </app-xp-accordion-panel-header>
       <app-xp-accordion-panel-body>
           <!-- <mat-nav-list role="list">
@@ -28,7 +28,7 @@
                 <p mat-line>{{ item }}</p>
             </mat-list-item>
           </mat-nav-list> -->
-          <div style="height: 1000px; background: lightcoral">TEST</div>
+          <div style="height: 500px; background: lightcoral">TEST</div>
         </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
     <app-xp-accordion-panel (click)="setStep(2)" [expanded]="step === 2">
@@ -41,13 +41,13 @@
                   <input matInput [placeholder]="keyword.name" [value]="keyword.value">
               </mat-form-field>
             </form> -->
-            <div style="height: 500px; background: lightcoral">TEST</div>
+            <div style="height: 100px; background: lightcoral">TEST</div>
         </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
-    <app-xp-accordion-panel (click)="setStep(3)" [expanded]="step === 3">
+    <!-- <app-xp-accordion-panel (click)="setStep(3)" [expanded]="step === 3">
         <app-xp-accordion-panel-header>
             <div class="header-style">stuff</div>
         </app-xp-accordion-panel-header>
         <app-xp-accordion-panel-body>LIST OF stuff GOES HERE</app-xp-accordion-panel-body>
-    </app-xp-accordion-panel>
+    </app-xp-accordion-panel> -->
 </div>

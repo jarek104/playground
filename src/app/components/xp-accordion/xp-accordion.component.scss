@@ -5,18 +5,8 @@
   height: 100%;
 }
 
-.item {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 0;
-  transition: all 0.2s;
-}
 
-.expand {
-  flex-grow: 1;
-}
-
-
+// Irrelevant
 .example-full-width {
   width: 300px;
   padding: 2px 16px;
