@@ -1,13 +1,8 @@
-<!-- <div fxLayout="column" fxLayoutAlign="start stretch"> -->
-  <div class="header-item" style="border-bottom: 1px solid black">
-      <ng-content select="app-xp-accordion-panel-header"></ng-content>
-  </div>
-  <div class="body-item" [ngClass]="{'body-item-expand': expanded}">
-      <ng-content select="app-xp-accordion-panel-body"></ng-content>
-  </div>
-  <!-- <ng-content select="app-xp-accordion-panel-header"></ng-content> -->
-  <!-- <ng-content select="app-xp-accordion-panel-body" *ngIf="expanded"></ng-content> -->
-<!-- </div> -->
+<ng-content select="app-xp-accordion-panel-header"></ng-content>
+<div class="body-item" [ngClass]="{'body-item-expand': expanded}">
+    <ng-content select="app-xp-accordion-panel-body"></ng-content>
+</div>
+
 
 
 

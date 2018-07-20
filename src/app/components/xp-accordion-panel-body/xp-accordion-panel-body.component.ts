@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-xp-accordion-panel-body',
