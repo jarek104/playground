@@ -1,5 +1,6 @@
 :host {
   flex-grow: 0;
+  flex-basis: unset;
   flex-shrink: 0;
   transition: flex-grow 0.2s;
   overflow: hidden;
