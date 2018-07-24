@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-xp-accordion-panel-header',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./xp-accordion-panel-header.component.scss']
 })
 export class XpAccordionPanelHeaderComponent implements OnInit {
+
+  @HostBinding('class.rotate') rotateChevron = false;
 
   constructor() { }
 

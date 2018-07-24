@@ -1,2 +1,10 @@
-<ng-content></ng-content>
+<div class="header-content">
+    <ng-content></ng-content>
+</div>
+<div>
+  <button mat-icon-button disableRipple>
+    <mat-icon class="chevron-animation" [ngClass]="{'rotate': rotateChevron}">keyboard_arrow_up</mat-icon>
+  </button>
+</div>
+
 

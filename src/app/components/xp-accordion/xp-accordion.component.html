@@ -1,7 +1,7 @@
 <div class="container" fxFlexFill>
     <app-xp-accordion-panel (click)="setStep(0)" [expanded]="step === 0">
-      <app-xp-accordion-panel-header>
-        <div class="header-style">Query Results</div>
+      <app-xp-accordion-panel-header class="header-style">
+        <div>Query Results</div>
       </app-xp-accordion-panel-header>
       <app-xp-accordion-panel-body>
           <mat-nav-list role="list">
@@ -18,8 +18,8 @@
       </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
     <app-xp-accordion-panel (click)="setStep(1)" [expanded]="step === 1">
-        <app-xp-accordion-panel-header>
-          <div class="header-style">Related Documents</div>
+        <app-xp-accordion-panel-header class="header-style">
+          <div>Related Documents</div>
         </app-xp-accordion-panel-header>
         <app-xp-accordion-panel-body>
           <mat-nav-list role="list" *ngFor="let item of documents">
@@ -30,8 +30,8 @@
         </app-xp-accordion-panel-body>
     </app-xp-accordion-panel>
     <app-xp-accordion-panel (click)="setStep(2)" [expanded]="step === 2">
-        <app-xp-accordion-panel-header>
-          <div class="header-style">Keywords</div>
+        <app-xp-accordion-panel-header class="header-style">
+          <div>Keywords</div>
         </app-xp-accordion-panel-header>
         <app-xp-accordion-panel-body>
             <form fxLayout="column" fxLayoutAlign="start stretch">

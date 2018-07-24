@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.chevron-animation {
+  transition: all 0.2s;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+  transition: all 0.2s;
+}
